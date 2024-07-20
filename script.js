@@ -29,3 +29,15 @@ next.addEventListener('click', (e) => {
     }
     changeSlide();
 })
+
+const scrol = document.querySelectorAll('.products');
+if(scrol.length == 0)
+{
+    console.log(imgs);
+}
+for(const it of scrol) {
+    it.addEventListener('wheel', (evt) => {
+        evt.preventDefault();
+        it.scrollLeft += evt.deltaY;
+    });
+}
